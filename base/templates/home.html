@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+
+{% block content %}
+   
+
+  <div class="container">
+
+    {% for i in data %}
+
+    <div class="card">
+
+        <img src="{{ i.image }}" alt="{{ i.title }}">
+
+        <h2>{{ i.title|upper }}</h2>
+
+        <h3>{{ i.desc|truncatewords:6 }}</h3>
+
+        <a href="{% url 'read' i.id %}">READ MORE</a>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+    
+{% endblock %}

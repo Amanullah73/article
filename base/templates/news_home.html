@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+      </nav>
+
+    <!-- NEWS CARDS -->
+
+    <div class="container">
+
+        {% for i in data %}
+
+        <div class="card">
+
+            <img src="{{ i.image }}" alt="">
+
+            <h2>{{ i.title }}</h2>
+
+            <h3>
+                {{ i.desc|truncatewords:18 }}
+            </h3>
+
+            <a href="{% url 'news_read' i.id %}">
+                Read More
+            </a>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+{% endblock %}
+

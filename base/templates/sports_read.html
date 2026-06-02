@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+
+{% block content %}
+ <!-- READ PAGE -->
+
+    <div class="read-container">
+
+        <img src="{{ data.image }}" alt="">
+
+        <h2>{{ data.title }}</h2>
+
+        <p>
+            {{ data.desc }}
+        </p>
+
+    </div>
+{% endblock %}
